@@ -1,34 +1,23 @@
-var box = document.getElementById("box");
-var colorText = document.getElementById("colorText");
-var redInput = document.getElementById("red");
-var greenInput = document.getElementById("green");
-var blueInput = document.getElementById("blue");
-var randomColorButton = document.getElementById("randomColor");
-var invertColorButton = document.getElementById("invertColor");
+let box = document.getElementById(`box`)
+let redSlider = document.getElementById(`redSlider`)
+let greenSlider = document.getElementById(`greenSlider`)
+let blueSlider = document.getElementById(`blueSlider`)
+let randomButton = document.getElementById(`randomButton`)
+let colorText = document.getElementById(`colorText`)
 
-redInput.addEventListener("input", setColor);
-greenInput.addEventListener("input", setColor);
-blueInput.addEventListener("input", setColor);
-randomColorButton.addEventListener("click", setRandomColor);
-invertColorButton.addEventListener("click", setInvertedColor);
+redSlider.addEventListener(`input`, changeColor)
+greenSlider.addEventListener(`input`, changeColor)
+blueSlider.addEventListener(`input`, changeColor)
+randomButton.addEventListener(`click`, changeRandomColor)
 
-function setColor() {
-    box.style.backgroundColor = "rgb(" + redInput.value + ", " + greenInput.value + ", " + blueInput.value + ")";
-    colorText.innerHTML = "rgb(" + redInput.value + ", " + greenInput.value + ", " + blueInput.value + ")";
+function changeColor() {
+  box.style.backgroundColor = `rgb(${redSlider.value}, ${greenSlider.value}, ${blueSlider.value})`
+  colorText.innerHTML = `rgb(${redSlider.value}, ${greenSlider.value}, ${blueSlider.value})`
 }
 
-function setRandomColor() {
-    redInput.value = Math.floor(Math.random() * 256);
-    greenInput.value = Math.floor(Math.random() * 256);
-    blueInput.value = Math.floor(Math.random() * 256);
-
-    setColor();
-}
-
-function setInvertedColor() {
-    redInput.value = 255 - redInput.value;
-    greenInput.value = 255 - greenInput.value;
-    blueInput.value = 255 - blueInput.value;
-
-    setColor();
+function changeRandomColor() {
+  redSlider.value = Math.floor(Math.random() * 256)
+  greenSlider.value = Math.floor(Math.random() * 256)
+  blueSlider.value = Math.floor(Math.random() * 256)
+  changeColor()
 }
