@@ -12,7 +12,7 @@ randomButton.addEventListener(`click`, changeRandomColor)
 
 function changeColor() {
   box.style.backgroundColor = `rgb(${redSlider.value}, ${greenSlider.value}, ${blueSlider.value})`
-  colorText.innerHTML = `rgb(${redSlider.value}, ${greenSlider.value}, ${blueSlider.value})`
+  colorText.innerHTML = box.style.backgroundColor
 }
 
 function changeRandomColor() {
