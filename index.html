@@ -16,23 +16,26 @@
 	<div id="box"></div>
 
 	<div id="sidePanel">
-		<div id="colorText">rgb(0, 0, 0)</div>
+		<p class="label">Color</p>
 
-		<div>
+		<div class="row">
 			<label for="redSlider">Red</label>
       <input type="range" min="0" max="255" value="0" id="redSlider">
     </div>
 
-    <div>
+    <div class="row">
       <label for="greenSlider">Green</label>
       <input type="range" min="0" max="255" value="0" id="greenSlider">
     </div>
 
-    <div>
+    <div class="row">
       <label for="blueSlider">Blue</label>
       <input type="range" min="0" max="255" value="0" id="blueSlider">
     </div>
 
+    <p id="colorParagraph">rgb(0, 0, 0)</p>
+
+    <p class="label">Random</p>
     <button id="randomButton">Random color</button>
   </div>
 </body>
