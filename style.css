@@ -16,10 +16,6 @@ body {
   margin-right: 30px;
 }
 
-.label {
-  font-weight: bold;
-}
-
 .row {
   margin-bottom: 20px;
 }
@@ -32,10 +28,6 @@ input {
 
 label {
   width: 50px;
-}
-
-#colorParagraph {
-  margin-bottom: 30px;
 }
 
 button {
