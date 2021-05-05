@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Color Picker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Color Picker</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.5">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>Color Picker</h1>
 
-	</script>
-</head>
+    <div id="box"></div>
 
-<body>
-	<h1>Color Picker</h1>
+    <div id="sidePanel">
+      <p id="colorParagraph">rgb(0, 0, 0)</p>
 
-	<div id="box"></div>
+      <div class="row">
+        <label for="redSlider">Red</label>
+        <input type="range" min="0" max="255" value="0" id="redSlider" />
+      </div>
 
-	<div id="sidePanel">
-		<p id="colorParagraph">rgb(0, 0, 0)</p>
+      <div class="row">
+        <label for="greenSlider">Green</label>
+        <input type="range" min="0" max="255" value="0" id="greenSlider" />
+      </div>
 
-		<div class="row">
-			<label for="redSlider">Red</label>
-      <input type="range" min="0" max="255" value="0" id="redSlider">
+      <div class="row">
+        <label for="blueSlider">Blue</label>
+        <input type="range" min="0" max="255" value="0" id="blueSlider" />
+      </div>
+
+      <button id="randomButton">Random color</button>
     </div>
-
-    <div class="row">
-      <label for="greenSlider">Green</label>
-      <input type="range" min="0" max="255" value="0" id="greenSlider">
-    </div>
-
-    <div class="row">
-      <label for="blueSlider">Blue</label>
-      <input type="range" min="0" max="255" value="0" id="blueSlider">
-    </div>
-
-    <button id="randomButton">Random color</button>
-  </div>
-</body>
-
+  </body>
 </html>
